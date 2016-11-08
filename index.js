@@ -32,7 +32,23 @@ class Person {
   }
 }
 
+class Car {
+  constructor(year, make, model) {
+    this.year = year;
+    this.make = make;
+    this.model = model;
+  }
+}
+
+class DriveTrain {
+  constructor(engine, transmission) {
+    this.engine = new Car(2017, 'Dodge', 'Charger Hellcat');
+  }
+}
+
 module.exports = {
   Person,
-  Head
+  Head,
+  Car,
+  DriveTrain
 };
