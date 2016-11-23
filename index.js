@@ -34,15 +34,45 @@ class Person {
 
 class Car {
   constructor(year, make, model) {
+    if (typeof year !== 'number') {
+      throw 'Year must be a number!';
+    }
     this.year = year;
     this.make = make;
     this.model = model;
   }
+  carYear() {
+    return this.year;
+  }
+  carMake() {
+    if (make !== 'Dodge') {
+      return make + ' sucks! Choose something better. :)';
+    }
+    return this.make;
+  }
+  carModel() {
+    return this.model;
+  }
 }
+
+//Want to go in more depth with engine. Brake down into cylinders, displacement, forced induction.
+//Want to go in more depth with transmission. Break down into gear/speed count, auto or manual.
 
 class DriveTrain {
   constructor(engine, transmission) {
-    this.engine = new Car(2017, 'Dodge', 'Charger Hellcat');
+    this.engine = engine;
+    this.transmission = transmission;
+  }
+  
+  carEngine() {
+    return this.engine;
+  }
+
+  carTransmission() {
+    if (transmission !== 'Auto' || transmission !== 'Manual') {
+      throw 'Transmission must be Automatic or Manual!';
+    }
+    return transmission;
   }
 }
 
