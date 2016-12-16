@@ -63,12 +63,12 @@ class DriveTrain {
     this.engine = engine;
     this.transmission = transmission;
   }
-  
-  carEngine() {
+
+  cylinderCount() {
     return this.engine;
   }
 
-  carTransmission() {
+  carTransmission(transmission) {
     if (transmission !== 'Auto' || transmission !== 'Manual') {
       throw 'Transmission must be Automatic or Manual!';
     }
